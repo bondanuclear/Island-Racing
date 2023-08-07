@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Advertisements;
-public class AdManager : MonoBehaviour, IUnityAdsListener
+public class AdManager : MonoBehaviour
 {
     public static AdManager instance;
     [SerializeField] DestinationGate destinationGate;
@@ -20,7 +20,7 @@ public class AdManager : MonoBehaviour, IUnityAdsListener
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
-            Advertisement.AddListener(this);
+            //Advertisement.AddListener(this);
             Advertisement.Initialize(gameID, testMode);
         }   
 
